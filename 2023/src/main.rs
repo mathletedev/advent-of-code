@@ -21,10 +21,11 @@ fn main() -> Result<(), Error> {
 
 	let part: u8 = data.trim().parse().unwrap();
 
-	let input = read_to_string(format!("./input/day{:02}-{}.txt", day, part))?;
+	let input = read_to_string(format!("./input/day{:02}.txt", day))?;
 
 	let solution = match day {
 		1 => days::day01::SOLUTION,
+		2 => days::day02::SOLUTION,
 		_ => panic!(),
 	};
 

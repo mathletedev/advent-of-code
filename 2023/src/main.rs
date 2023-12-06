@@ -28,6 +28,7 @@ fn main() -> Result<(), Error> {
 		2 => days::day02::SOLUTION,
 		4 => days::day04::SOLUTION,
 		5 => days::day05::SOLUTION,
+		6 => days::day06::SOLUTION,
 		_ => panic!(),
 	};
 

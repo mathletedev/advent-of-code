@@ -1,6 +1,7 @@
 use std::{
 	fs::read_to_string,
 	io::{stdin, stdout, Error, Write},
+	time::Instant,
 };
 
 pub mod days;
@@ -33,6 +34,8 @@ fn main() -> Result<(), Error> {
 		_ => panic!(),
 	};
 
+	let start = Instant::now();
+
 	let ans = (if part == 1 {
 		solution.part1
 	} else {
@@ -40,7 +43,12 @@ fn main() -> Result<(), Error> {
 	})
 	.unwrap()(&input);
 
+	let elapsed = start.elapsed();
+
+	println!();
 	println!("{ans}");
+	println!();
+	println!("Executed in {:.2?}", elapsed);
 
 	Ok(())
 }
